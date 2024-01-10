@@ -9,7 +9,7 @@ Given('I navigate to the JDoodle Online Java Compiler website for test5', async 
 
 
 When('I click on various sample code links', async function () {
-  const sampleLinks = await pageFixture.page.$$('.sample-code a');
+  const sampleLinks = await pageFixture.page.$$('.relative h-full print:hidden w-fit a');
   for (const link of sampleLinks) {
     await link.click();
     await pageFixture.page.waitForTimeout(5000);
